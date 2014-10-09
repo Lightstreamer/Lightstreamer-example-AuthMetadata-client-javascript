@@ -22,7 +22,7 @@
 require(["js/lsClient","js/Authentication","js/Constants","js/Subscriptions"], 
     function(lsClient,Authentication,Constants,Subscriptions) {
   
-  $("#submit_form :submit").click(function(event) {
+   $("#submit_form :submit").click(function(event) {
     //the user wants to authenticate
     
     //in this case we handle the auth via JS so prevent the form from submitting 
@@ -62,7 +62,9 @@ require(["js/lsClient","js/Authentication","js/Constants","js/Subscriptions"],
           
           //hide login form, show application
           $("#submit_form").hide();
-          $("#application").show();
+          $("#application").slideDown();
+          $("#logout").show();
+          
           
           //now we can connect to Lightstreamer
           lsClient.connectionDetails.setUser(user);
@@ -75,7 +77,8 @@ require(["js/lsClient","js/Authentication","js/Constants","js/Subscriptions"],
               jError("Connection to Lightstreanmer refused: " + code + " " + message,Constants.J_NOTIFY_OPTIONS_ERR);
               //hide login form, show application
               $("#submit_form").show();
-              $("#application").hide();
+              $("#application").slideUp();
+              $("#logout").hide();
             }
           });
         }
@@ -96,7 +99,8 @@ require(["js/lsClient","js/Authentication","js/Constants","js/Subscriptions"],
     lsClient.connectionDetails.setUser(null);
     lsClient.connectionDetails.setPassword(null);
     $("#submit_form").show();
-    $("#application").hide();
+    $("#application").slideUp();
+    $("#logout").hide();
     Subscriptions.reset();
   });
   

@@ -19,7 +19,7 @@
 
 <html>
   <head>
-    <title>Lightstreamer :: Authentication and Authorization Demo</title>
+    <title>Lightstreamer Authentication and Authorization Demo</title>
     
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/jNotify.jquery.css" />
@@ -32,10 +32,14 @@
           <a id="logo" href="http://www.lightstreamer.com" target="_blank"><img src="images/logo.png" alt="LIGHTSTREAMER" hspace="0" border="0" /></a>
         </div>
         <div>
-          <h1>Lightstreamer :: Authentication and Authorization Demo</h1>
+          <h1>Authentication and Authorization Demo</h1>
         </div>
       </div>
-      
+    
+      <div id="lock">
+        <img src="images/lock.jpg" />
+      </div>
+          
       <div id="submit_form">
         <h2>Login</h2>
         <form>
@@ -43,40 +47,42 @@
           <input type="password"  placeholder="password" id="password" disabled />
           <input type="submit" value="Go" disabled />
         </form>  
-        <div id="status"></div>
       </div>
       
-      <div id="application">
-        <div id="logout" class="button">Logout</div>
-        <h2>Click an item to subscribe</h2>
-        <h3>The Server will refuse the subscription if the user is not authorized for the selected item</h3>
-         
-        <div id="stocks" data-source="lightstreamer" class="itemrow button">
-          <span data-source="lightstreamer" data-field="item_name">-</span>
-          <span data-source="lightstreamer" data-field="status">click to subscribe</span>
+      <h2 id="logout" class="button">Logout</h2>
+      
+      <div id="clear">
+        <div id="application">
+          <h2>Click an item to subscribe</h2>
+          <h3>The Server will refuse the subscription if the user is not authorized for the selected item</h3>
+          <div id="scroll">
+            <div id="stocks" data-source="lightstreamer" class="itemrow button">
+              <span data-source="lightstreamer" data-field="item_name">-</span>
+              <span data-source="lightstreamer" data-field="status">click to subscribe</span>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <h2>Use one of the following user/password to login</h2>
+          <h3>Click an user to copy his credentials in the form</h3>
+          
+          <table>
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Password</th>
+                <th>Permissions</th>
+              </tr>
+            </thead>
+            <tbody id="userlist">
+            </tbody>
+          
+          </table>
+          
+          
         </div>
       </div>
-      
-      <div>
-        <h2>Use one of the following user/password to login</h2>
-        <h3>Click an user to copy his credentials in the form</h3>
-        
-        <table>
-          <thead>
-            <tr>
-              <th>User</th>
-              <th>Password</th>
-              <th>Permissions</th>
-            </tr>
-          </thead>
-          <tbody id="userlist">
-          </tbody>
-        
-        </table>
-        
-        
-      </div>
-      
       
     </div>
     

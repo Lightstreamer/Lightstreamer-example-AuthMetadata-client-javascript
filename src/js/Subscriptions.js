@@ -2,6 +2,7 @@ define(["Subscription","DynaGrid","./lsClient"],
     function(Subscription,DynaGrid,lsClient) {
   
   var subscribed = {};
+  var CLICK = "click to subscribe";
   
   var itemsGrid= new DynaGrid("stocks", true);
   
@@ -47,17 +48,19 @@ define(["Subscription","DynaGrid","./lsClient"],
         });
       } 
       
-      //let's highlight the new value
-      info.setHotTime(200);
-      info.setHotToColdTime(500);
-      info.setAttribute("yellow", "", "backgroundColor");
+      if (info.getChangedFieldValue("status") != CLICK) {
+        //let's highlight the new value
+        info.setHotTime(200);
+        info.setHotToColdTime(500);
+        info.setAttribute("yellow", "", "backgroundColor");
+      }
     }
   });  
   
   
   function resetGrid() {
     for (var i=1; i<=30; i++) {
-      itemsGrid.updateRow("item"+i,{item_name: "item"+i, status:"click to subscribe"});
+      itemsGrid.updateRow("item"+i,{item_name: "item"+i, status:CLICK});
     }
   }
   resetGrid();

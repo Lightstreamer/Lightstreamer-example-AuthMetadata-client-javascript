@@ -20,26 +20,42 @@ body {
 }
 
 #wrap {
-  width: 600px;
+  width: 700px;
   margin: 0 auto;
 }
+#clear {
+  padding-top: 20px;
+  clear:both;
+}
+.button {
+  cursor:pointer;
+}
+
+/*login stuff*/
+#lock {
+  float:left;
+  margin-right:10px;
+}
+#lock img {
+  height: 100px;:
+}
+#logout {
+  display: none;
+}
+#logout:hover {
+  color: #FF7600;
+}
+#submit_form, #logout {
+  margin-top: 30px;
+}
+
+/*application stuff*/
 #application {
   display: none;
 }
-
-table {
-  border-collapse: collapse; 
-}
-th {
-  text-align: left;
-}
-td, th {
-  padding-left: 40px;
-  border-bottom: 1px solid black;
-}
-
-.button {
-  cursor:pointer;
+#scroll {
+  height: 300px;
+  overflow:auto;
 }
 .itemrow {
   padding: 10px;
@@ -47,3 +63,19 @@ td, th {
 .itemrow:hover {
   background-color: #FF7600;
 }
+
+/*table stuff*/
+#wrap table {
+  border-collapse: collapse; 
+}
+#wrap th {
+  text-align: left;
+}
+#wrap td, #wrap th {
+  padding-left: 40px;
+  border-bottom: 1px solid black;
+}
+
+
+
+
