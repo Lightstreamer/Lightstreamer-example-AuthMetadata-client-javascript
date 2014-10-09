@@ -60,6 +60,10 @@ require(["js/lsClient","js/Authentication","js/Constants","js/Subscriptions"],
           jError("Authentication Failed: wrong user/password",Constants.J_NOTIFY_OPTIONS_ERR);
         } else {
           
+          //hide login form, show application
+          $("#submit_form").hide();
+          $("#application").show();
+          
           //now we can connect to Lightstreamer
           lsClient.connectionDetails.setUser(user);
           lsClient.connectionDetails.setPassword(token); //send the token, not the password, to the Lightstreamer server
@@ -69,13 +73,9 @@ require(["js/lsClient","js/Authentication","js/Constants","js/Subscriptions"],
           lsClient.addListener({
             onServerError:function(code,message) {
               jError("Connection to Lightstreanmer refused: " + code + " " + message,Constants.J_NOTIFY_OPTIONS_ERR);
-            },
-            onStatusChange: function(newStatus) {
-              if (newStatus.indexOf("CONNECTED") == 0) {
-                //hide login form, show application
-                $("#submit_form").hide();
-                $("#application").show();
-              }
+              //hide login form, show application
+              $("#submit_form").show();
+              $("#application").hide();
             }
           });
         }
