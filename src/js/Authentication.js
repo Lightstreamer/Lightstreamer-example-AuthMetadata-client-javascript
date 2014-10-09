@@ -1,12 +1,18 @@
 define(function() {
   
   //here is the list of the user/password/token
-  //these info, excluding the password, is shared with the Metadata Adapter
+  //these info, excluding the password, are shared with the Metadata Adapter
   var users = {
       user1: {
         password:"wow",
         token:"ikgdfigdfhihdsih",
         permissions:"item1, item2, item3"
+      },
+      
+      patient0: {
+        password:"alas",
+        token:"imwrongtoken",
+        permissions:"the token of this user will result expired on the server"
       }
       
   };
