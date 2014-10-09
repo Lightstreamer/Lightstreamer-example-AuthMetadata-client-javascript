@@ -28,30 +28,35 @@
     <a href="https://github.com/Weswit/xxxxxxxxxx"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
     <div id="wrap">
       <div>
-	      <div>
-	        <a id="logo" href="http://www.lightstreamer.com" target="_blank"><img src="images/logo.png" alt="LIGHTSTREAMER" hspace="0" border="0" /></a>
-	      </div>
-	      <div>
-	        <h1>Lightstreamer :: Authentication and Authorization Demo</h1>
-	      </div>
-	    </div>
-	    
-	    <div id="submit_form">
-	      <h2>Login</h2>
-	      <form>
-		      <input type="text"  placeholder="user" id="user" disabled />
-		      <input type="password"  placeholder="password" id="password" disabled />
-		      <input type="submit" value="Go" disabled />
-		    </form>  
-	      <div id="status"></div>
-	    </div>
-	    
-	    <div id="application">
-	     <h2>Click an item to subscribe</h2>
-	     APP HERE!
-	    </div>
-	    
-	    <div>
+        <div>
+          <a id="logo" href="http://www.lightstreamer.com" target="_blank"><img src="images/logo.png" alt="LIGHTSTREAMER" hspace="0" border="0" /></a>
+        </div>
+        <div>
+          <h1>Lightstreamer :: Authentication and Authorization Demo</h1>
+        </div>
+      </div>
+      
+      <div id="submit_form">
+        <h2>Login</h2>
+        <form>
+          <input type="text"  placeholder="user" id="user" disabled />
+          <input type="password"  placeholder="password" id="password" disabled />
+          <input type="submit" value="Go" disabled />
+        </form>  
+        <div id="status"></div>
+      </div>
+      
+      <div id="application">
+        <h2>Click an item to subscribe</h2>
+        <h3>The Server will refuse the subscription if the user is not authorized for the selected item</h3>
+         
+        <div id="stocks" data-source="lightstreamer" class="itemrow">
+          <span data-source="lightstreamer" data-field="item_name">-</span>
+          <span data-source="lightstreamer" data-field="status">click to subscribe</span>
+        </div>
+      </div>
+      
+      <div>
         <h2>Use one of the following user/password to login</h2>
         
         <table>
@@ -70,7 +75,7 @@
         
       </div>
       
-	    
+      
     </div>
     
     <script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.9/require.min.js"></script>

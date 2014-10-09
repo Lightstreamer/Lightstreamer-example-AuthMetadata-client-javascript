@@ -20,12 +20,19 @@ body {
 }
 
 #wrap {
-	width: 600px;
+  width: 600px;
   margin: 0 auto;
 }
 #application {
-	display: none;
+  display: none;
 }
 th {
-	text-align: left
+  text-align: left;
+}
+.itemrow {
+  cursor:pointer;
+  padding: 10px;
+}
+.itemrow:hover {
+  background-color: #FF7600;
 }

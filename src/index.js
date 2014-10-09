@@ -19,13 +19,8 @@
 //We do not actually deploy the WebServer, we will simulate the authentication on the client (see the js/Authentication.js) 
 
 
-require(["LightstreamerClient","Subscription","StatusWidget","js/Authentication","js/Constants"], 
-    function(LightstreamerClient,Subscription,StatusWidget,Authentication,Constants) {
-  
-  //prepare the LightstreamerClient we'll use to connect to the server
-  var lsClient = new LightstreamerClient(Constants.SERVER,Constants.ADAPTER);
-  lsClient.addListener(new StatusWidget("left", "5px", true));
-  
+require(["js/lsClient","js/Authentication","js/Constants","js/Subscriptions"], 
+    function(lsClient,Authentication,Constants,Subscriptions) {
   
   $("#submit_form :submit").click(function(event) {
     //the user wants to authenticate
@@ -39,7 +34,6 @@ require(["LightstreamerClient","Subscription","StatusWidget","js/Authentication"
     //trim input values
     var user = $("#user").val().replace(Constants.TRIM_REGEXP,"$1");
     var password = $("#password").val().replace(Constants.TRIM_REGEXP,"$1");
-
     
     //Let's call the webserver to ask for an authentication token
     //in this demo we call a longin.js file that is an empty file
@@ -80,7 +74,6 @@ require(["LightstreamerClient","Subscription","StatusWidget","js/Authentication"
               jError("Connection to Lightstreanmer refused: " + code + " " + message,Constants.J_NOTIFY_OPTIONS_ERR);
             }
           });
-          
         }
       },
       complete: function() {
