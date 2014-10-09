@@ -26,11 +26,22 @@ body {
 #application {
   display: none;
 }
+
+table {
+  border-collapse: collapse; 
+}
 th {
   text-align: left;
 }
-.itemrow {
+td, th {
+  padding-left: 40px;
+  border-bottom: 1px solid black;
+}
+
+.button {
   cursor:pointer;
+}
+.itemrow {
   padding: 10px;
 }
 .itemrow:hover {
