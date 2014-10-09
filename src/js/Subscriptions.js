@@ -21,12 +21,12 @@ define(["Subscription","DynaGrid","./lsClient"],
             //already subscribed 
             return;
           }
-          subscribed[item] = true;
-          
           //prepare the subscription for the item
           var subscription = new Subscription("MERGE",item,["last_price"]);
           subscription.setDataAdapter("QUOTE_ADAPTER");
           subscription.setRequestedSnapshot("yes");
+          
+          subscribed[item] = subscription;
           
           //add a listener to handle the subscription events
           subscription.addListener({
@@ -55,8 +55,21 @@ define(["Subscription","DynaGrid","./lsClient"],
   });  
   
   
-  for (var i=1; i<=30; i++) {
-    itemsGrid.updateRow("item"+i,{item_name: "item"+i});
+  function resetGrid() {
+    for (var i=1; i<=30; i++) {
+      itemsGrid.updateRow("item"+i,{item_name: "item"+i, status:"click to subscribe"});
+    }
   }
+  resetGrid();
+  
+  return {
+    reset: function() {
+      for (var sub in subscribed) {
+        lsClient.unsubscribe(subscribed[sub]);
+      }
+      subscribed = {};
+      resetGrid();
+    }
+  };
   
 });

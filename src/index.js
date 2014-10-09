@@ -97,6 +97,7 @@ require(["js/lsClient","js/Authentication","js/Constants","js/Subscriptions"],
     lsClient.connectionDetails.setPassword(null);
     $("#submit_form").show();
     $("#application").hide();
+    Subscriptions.reset();
   });
   
   
