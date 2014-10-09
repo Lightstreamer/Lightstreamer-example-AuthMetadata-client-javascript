@@ -16,15 +16,23 @@ define(function() {
       }
       
   };
-
+  
+  function userClicked(user) {
+    return function() {
+      $("#user").val(user);
+      $("#password").val(users[user].password);
+    };
+  }
+  
   //show the list of available user/password pairs on the page, I would not do that
   //on a production site ;)
   for (var user in users) {
     $("#userlist").append(
-        $("<tr>")
+        $("<tr class='button'>")
           .append($("<td>").text(user))
           .append($("<td>").text(users[user].password))
-          .append($("<td>").text(users[user].permissions)));
+          .append($("<td>").text(users[user].permissions))
+          .click(userClicked(user)));
   }
   
   
