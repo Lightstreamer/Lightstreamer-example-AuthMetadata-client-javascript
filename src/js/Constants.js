@@ -18,7 +18,7 @@ define(function() {
   var protocolToUse = document.location.protocol != "file:" ? document.location.protocol : "http:";
   
   return {
-    ADAPTER: "DEMO",
+    ADAPTER: "AUTHDEMO",
     SERVER: protocolToUse+"//localhost:8080",
     J_NOTIFY_OPTIONS_ERR: {
       autoHide : true, // added in v2.0
