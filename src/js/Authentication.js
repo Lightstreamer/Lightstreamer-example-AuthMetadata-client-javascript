@@ -10,9 +10,27 @@ define(function() {
       },
       
       patient0: {
-        password:"alas",
+        password:"suchpassword",
         token:"imwrongtoken",
         permissions:"the token of this user will result expired on the server"
+      },
+      
+      leto: {
+        password:"sosecurity",
+        token:"powerfultoken",
+        permissions:"all"
+      },
+      
+      gollum: {
+        password:"veryauth",
+        token:"toobadforyou",
+        permissions:"none"
+      },
+      
+      lucky: {
+        password: "muchhappy",
+        token:"srsly",
+        permissions:"item13, item17"
       }
       
   };
