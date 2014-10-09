@@ -90,7 +90,14 @@ require(["js/lsClient","js/Authentication","js/Constants","js/Subscriptions"],
   //enable the login form
   $("input").prop('disabled', false);
   
-  
+  //setup the logout button
+  $("#logout").click(function(){
+    lsClient.disconnect();
+    lsClient.connectionDetails.setUser(null);
+    lsClient.connectionDetails.setPassword(null);
+    $("#submit_form").show();
+    $("#application").hide();
+  });
   
   
 });
