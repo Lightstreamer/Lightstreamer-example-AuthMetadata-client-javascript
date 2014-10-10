@@ -5,6 +5,11 @@ The Lightstreamer Authentication and Authorization Demo is a simple example illu
 
 This project includes a simple web client front-end example for the [Lightstreamer - Authentication and Authorization Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-AuthMetadata-adapter-java).
 
+## Live Demo
+
+[![screenshot](screenshot.png)](http://demos.lightstreamer.com/AuthDemo)
+
+###[![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/AuthDemo)
 
 ## Details
 
