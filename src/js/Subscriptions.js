@@ -29,6 +29,8 @@ define(["Subscription","DynaGrid","./lsClient"],
           
           subscribed[item] = subscription;
           
+          itemsGrid.updateRow(item,{status: "Subscribing"});
+          
           //add a listener to handle the subscription events
           subscription.addListener({
             onItemUpdate: function(updateInfo) {
