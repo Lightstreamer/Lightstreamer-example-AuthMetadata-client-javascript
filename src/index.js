@@ -43,7 +43,7 @@ require(["js/lsClient","js/Authentication","js/Constants","js/Subscriptions"],
       type: "POST",
       data: {
         user: user,
-        password: password,
+        password: password
       },
       error: function(obj,errorText) {
         jError("Authentication Failed: " + errorText,Constants.J_NOTIFY_OPTIONS_ERR);
