@@ -61,9 +61,6 @@ If you want to install a version of this demo pointing to your local Lightstream
 * The [Lightstreamer - Authentication and Authorization Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-AuthMetadata-adapter-java) has to be deployed on your local 
 Lightstreamer Server instance. Please check out that project and follow the installation instructions provided with it.
 * Download this project.
-* Lightstreamer JS client is currently hot-linked in the html page: you may want to replace it with a local version and/or to upgrade its version.
-* RequireJS is currently hot-linked in the html page: you may want to replace it with a local version and/or to upgrade its version.
-* jQuery is currently hot-linked in the html page: you may want to replace it with a local version and/or to upgrade its version.
 * Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server: copy there the contents of the `/src` folder of this project.
 The client demo configuration assumes that Lightstreamer Server and this client are launched on the same machine. If you need to target a 
 different Lightstreamer server, please open the `src/js/Constants.js` and configure the SERVER element accordingly. 
