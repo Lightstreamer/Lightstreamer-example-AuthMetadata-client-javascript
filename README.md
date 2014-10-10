@@ -10,6 +10,7 @@ This project includes a simple web client front-end example for the [Lightstream
 
 This *Authentication and Authorization Demo* illustrates the typical best practice used for Lightstreamer Web applications, when a Web/Application server is involved in the process. 
 The actual authentication is usually handled by the legacy Web/Application server, irrespective of Lightstreamer. 
+
 from `src/index.js`:
 ```js
 [...]
@@ -27,6 +28,7 @@ $.ajax({
 Some sort of token is sent back to the Client through cookies, response payload or any other technique. 
 When the Web Client creates the Lightstreamer session, instead of sending again the full credentials (usually involving a password) to 
 Lightstreamer Server, it sends just the username and the token. 
+
 from `src/index.js`:
 ```js
 [...]
