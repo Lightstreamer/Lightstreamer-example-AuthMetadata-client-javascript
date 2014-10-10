@@ -9,9 +9,36 @@ This project includes a simple web client front-end example for the [Lightstream
 ## Details
 
 This *Authentication and Authorization Demo* illustrates the typical best practice used for Lightstreamer Web applications, when a Web/Application server is involved in the process. 
-The actual authentication is usually handled by the legacy Web/Application server, irrespective of Lightstreamer. Some sort of token is sent back to the Client (through cookies, 
-response payload or any other technique). When the Web Client creates the Lightstreamer session, instead of sending again the full credentials (usually involving a password) to 
-Lightstreamer Server, it sends just the username and the token. The Metadata Adapter is passed this information and validates the token against the Web/Application Server that 
+The actual authentication is usually handled by the legacy Web/Application server, irrespective of Lightstreamer. 
+from `src/index.js`:
+```js
+[...]
+
+$.ajax({
+  url: "js/login.js",
+  type: "POST",
+  data: {
+    user: user,
+    password: password,
+  },
+  
+[...]
+```
+Some sort of token is sent back to the Client through cookies, response payload or any other technique. 
+When the Web Client creates the Lightstreamer session, instead of sending again the full credentials (usually involving a password) to 
+Lightstreamer Server, it sends just the username and the token. 
+from `src/index.js`:
+```js
+[...]
+
+lsClient.connectionDetails.setUser(user);
+lsClient.connectionDetails.setPassword(token); //send the token, not the password, to the Lightstreamer server
+lsClient.connect();
+  
+[...]
+```
+
+The Metadata Adapter is passed this information and validates the token against the Web/Application Server that 
 generated it (or a database or whatever back-end system).
 
 ![sequence diagram](sequence_diagram.png)
