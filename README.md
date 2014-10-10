@@ -43,6 +43,8 @@ lsClient.connect();
 The Metadata Adapter is passed this information and validates the token against the Web/Application Server that 
 generated it (or a database or whatever back-end system).
 
+Here an overview of the whole sequence:
+
 ![sequence diagram](sequence_diagram.png)
 
 In this demo client the Web/Application server is not actually involved and calls to placeholder methods are performed to obtain and extract the token.
