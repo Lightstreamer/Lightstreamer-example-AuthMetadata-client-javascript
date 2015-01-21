@@ -69,6 +69,7 @@ Lightstreamer Server instance. Please check out that project and follow the inst
 * Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server: copy there the contents of the `/src` folder of this project.
 The client demo configuration assumes that Lightstreamer Server and this client are launched on the same machine. If you need to target a 
 different Lightstreamer server, please open the `src/js/Constants.js` and configure the SERVER element accordingly. 
+* Lightstreamer JS client, RequireJS and jQuery are currently hot-linked in the html page: you may want to replace them with a local version and/or to upgrade their version.
 * Open your browser and point it to to the newly deployed folder.
 
 ## See Also
