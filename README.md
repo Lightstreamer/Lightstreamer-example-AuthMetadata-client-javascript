@@ -3,7 +3,7 @@
 The Lightstreamer Authentication and Authorization Demo is a simple example illustrating *authentication* and *authorization* mechanisms when an 
 *external Web/Application Server* is involved in the process.
 
-This project includes a simple web client front-end example for the [Lightstreamer - Authentication and Authorization Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-AuthMetadata-adapter-java).
+This project includes a simple web client front-end example for the [Lightstreamer - Authentication and Authorization Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-AuthMetadata-adapter-java).
 
 ## Live Demo
 
@@ -57,13 +57,13 @@ In this demo client the Web/Application server is not actually involved and call
 Once the user is authenticated on the Lightstreamer server as explained above, the client interface presents a list of items that can be subscribed. Every time an item is subscribed 
 the Lightstreamer Server proceeds with the authorization of the request; each one of the username available in the demo is bound to a list of items it is authorized to view. Again the
 server might use an external service to verify if the received request is a valid one or not: 
-more details on this are shown in the [Adapter project](https://github.com/Weswit/Lightstreamer-example-AuthMetadata-adapter-java).
+more details on this are shown in the [Adapter project](https://github.com/Lightstreamer/Lightstreamer-example-AuthMetadata-adapter-java).
 
 
 ## Install
 
 If you want to install a version of this demo pointing to your local Lightstreamer Server, follow these steps:
-* The [Lightstreamer - Authentication and Authorization Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-AuthMetadata-adapter-java) has to be deployed on your local 
+* The [Lightstreamer - Authentication and Authorization Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-AuthMetadata-adapter-java) has to be deployed on your local 
 Lightstreamer Server instance. Please check out that project and follow the installation instructions provided with it.
 * Download this project.
 * Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server: copy there the contents of the `/src` folder of this project.
@@ -76,7 +76,7 @@ different Lightstreamer server, please open the `src/js/Constants.js` and config
 
 ### Lightstreamer Adapters Needed by This Client
 
-* [Lightstreamer - Authentication and Authorization Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-AuthMetadata-adapter-java)
+* [Lightstreamer - Authentication and Authorization Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-AuthMetadata-adapter-java)
 
 ## Lightstreamer Compatibility Notes
 
