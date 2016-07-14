@@ -16,10 +16,11 @@ Copyright (c) Lightstreamer Srl
 define(function() {
   
   var protocolToUse = document.location.protocol != "file:" ? document.location.protocol : "http:";
+  var portToUse = document.location.protocol == "https:" ? "443" : "8080";
   
   return {
     ADAPTER: "AUTHDEMO",
-    SERVER: protocolToUse+"//localhost:8080",
+    SERVER: protocolToUse+"//localhost:"+portToUse,
     J_NOTIFY_OPTIONS_ERR: {
       autoHide : true, // added in v2.0
       TimeShown : 3000,
