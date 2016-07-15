@@ -7,9 +7,9 @@ This project includes a simple web client front-end example for the [Lightstream
 
 ## Live Demo
 
-[![screenshot](screenshot.png)](http://demos.lightstreamer.com/AuthDemo)
+[![screenshot](screenshot.png)](https://demos.lightstreamer.com/AuthDemo)
 
-###[![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/AuthDemo)
+###[![](http://demos.lightstreamer.com/site/img/play.png) View live demo](https://demos.lightstreamer.com/AuthDemo)
 
 ## Details
 
